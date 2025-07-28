@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Chewy', cursive;
+    /* background-color: blue; */
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    overflow: hidden;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background-image 0.5s ease;
+}
+
+.main_body {
+    height: 100vh;
+    width: 100%;
+
+    /* background-size: cover;
+    overflow: hidden; */
+}
+
+.simon_body {
+    height: 400px;
+    width: 400px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+    gap: 0.5rem;
+    transform: scale(0.9);
+}
+
+
+.option {
+    display: flex;
+    width: 49%;
+    height: 49%;
+    /* border: 1px solid black; */
+    align-items: center;
+    justify-content: center;
+}
+
+#a {
+    border-top-left-radius: 100%;
+    transition: opacity 0.3s linear;
+    background-color: green;
+}
+
+#b {
+    border-top-right-radius: 100%;
+    transition: opacity 0.3s linear;
+    background-color: red;
+}
+
+#c {
+    border-bottom-left-radius: 100%;
+    transition: opacity 0.3s linear;
+    background-color: yellow;
+}
+
+#d {
+    border-bottom-right-radius: 100%;
+    transition: opacity 0.3s linear;
+    background-color: blue;
+}
+
+.flash {
+    opacity: 0.2;
+    transition: opacity 0.3s ease;
+}
+
+h1 {
+    margin: 14.5px 0;
+}
+
+h2 {
+    display: block;
+}
+
+h1,
+h2 {
+    text-align: center;
+    color: white;
+}
+
+/* New for Me */
+.wrapper {
+    height: 84.31px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 16rem;
+    justify-content: stretch;
+    animation: animate 20s linear infinite;
+    overflow: visible;
+}
+
+@keyframes animate {
+    to {
+        transform: translateX(calc(-5 * 16rem));
+    }
+}
+
+.item {
+    height: 109.3px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+
+.restart {
+    cursor: pointer;
+
+}
+
+.scores {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    line-height: 2.5rem;
+}
+
+.score,
+.high_score {
+    color: whitesmoke;
+}
+
+.startDiv {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+.start{
+    width: fit-content;
+}
+
+.start:hover {
+    transform: scale(1.2);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+.menu_icon{
+    top:120px
+}
+
+.icons{
+    visibility: hidden;
+    transition: opacity 0.3s ease-in;
+    opacity: 0;
+}
+
+
+.dark_mode {
+    height: 2.1rem;
+    width: 2.1rem;
+    position: absolute;
+    top: 165px;
+    left: 10px;
+    border-radius: 50%;
+}
+
+.dark_mode:hover,
+.music_icon:hover,
+.sound_icon:hover,
+.help_icon:hover,
+.menu_icon:hover{
+    transform: scale(1.18);
+}
+
+/* Music Button */
+.music_icon,
+.sound_icon, .menu_icon{
+    height: 2.4rem;
+    width: 2.4rem;
+    border-radius: 50%;
+    position: absolute;
+    left: 10px;
+    cursor: pointer;
+}
+.music_icon{
+    top:210px;
+}
+.sound_icon {
+    top: 255px;
+}
+
+.help_icon {
+    height: 2.4rem;
+    width: 2.4rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 120px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.helpBox {
+    height: fit-content;
+    width: 300px;
+    margin: auto;
+    cursor: pointer;
+    border: 1.5px solid white;
+    position: absolute;
+    left:40%;
+    bottom: 15%;
+    background-color: rgb(77, 75, 75);
+    color: rgb(169, 163, 163);
+    padding: 15px;
+    padding-top: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in;
+    border-radius: 15px;
+} 
+.helpBox ol li{
+    margin-bottom: 5px;
+}
+.helpBox ol li span{
+    color: rgb(255, 255, 255);
+}
+
+/* Media Query */
+@media (max-width: 600px) {
+    .wrapper {
+        display: none;
+    }
+
+    .icon {
+        margin: 3rem;
+    }
+
+    .simon_body {
+        transform: scale(0.8);
+        outline: none;
+        box-shadow: none;
+    }
+
+    .menu_icon{
+        top:10px
+    }
+    .dark_mode {
+        top: 55px;
+    }
+
+    .music_icon {
+        top: 100px;
+    }
+
+    .sound_icon {
+        top: 145px;
+    }
+
+    .help_icon {
+        top: 15px;
+    }
+    .helpBox{
+        left:18%;
+        bottom: 35%;
+    }
+
+}
