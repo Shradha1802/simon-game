@@ -97,6 +97,9 @@ h2 {
     animation: animate 20s linear infinite;
     overflow: visible;
 }
+.wrapper div{
+    cursor: pointer;
+}
 
 @keyframes animate {
     to {
@@ -278,5 +281,6 @@ img {
         left:18%;
         bottom: 35%;
     }
+
 
 }
