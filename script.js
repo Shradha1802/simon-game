@@ -136,6 +136,7 @@ restart.addEventListener("click", () => {
   // gameStart=true;
   level = 1;
   idx = 0;
+  score.innerText=0;
   levelUpgrade();
 })
 
@@ -278,4 +279,5 @@ menuIcon.addEventListener("click", (e) => {
     menuIcon.setAttribute('src', 'menu.png');
     document.querySelector('.icons').style.opacity = 0;
   }
+
 })
