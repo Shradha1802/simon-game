@@ -74,18 +74,26 @@ body {
 }
 
 h1 {
+    text-align: center;
+    color: transparent;
     margin: 14.5px 0;
 }
 
 h2 {
-    display: block;
-}
-
-h1,
-h2 {
     text-align: center;
+    display: block;
     color: white;
 }
+.SimonGame{
+    background-image: url(9.webp);
+    background-size: cover;
+    background-clip: text;
+    background-color: transparent;
+    font-family:"Boogaloo", serif;
+    font-weight:700; 
+    font-size:3.5rem; 
+}
+
 
 /* New for Me */
 .wrapper {
@@ -97,7 +105,8 @@ h2 {
     animation: animate 20s linear infinite;
     overflow: visible;
 }
-.wrapper div{
+
+.wrapper div {
     cursor: pointer;
 }
 
@@ -148,13 +157,13 @@ img {
     cursor: pointer;
     display: flex;
     justify-content: center;
+    height: fit-content;
 }
-.start{
+.outer:hover{
+    transform: scale(1.1);
+}
+.start {
     width: fit-content;
-}
-
-.start:hover {
-    transform: scale(1.2);
 }
 
 ::-webkit-scrollbar {
@@ -163,11 +172,11 @@ img {
 
 
 
-.menu_icon{
-    top:120px
+.menu_icon {
+    top: 120px
 }
 
-.icons{
+.icons {
     visibility: hidden;
     transition: opacity 0.3s ease-in;
     opacity: 0;
@@ -187,13 +196,14 @@ img {
 .music_icon:hover,
 .sound_icon:hover,
 .help_icon:hover,
-.menu_icon:hover{
+.menu_icon:hover {
     transform: scale(1.18);
 }
 
 /* Music Button */
 .music_icon,
-.sound_icon, .menu_icon{
+.sound_icon,
+.menu_icon {
     height: 2.4rem;
     width: 2.4rem;
     border-radius: 50%;
@@ -201,9 +211,11 @@ img {
     left: 10px;
     cursor: pointer;
 }
-.music_icon{
-    top:210px;
+
+.music_icon {
+    top: 210px;
 }
+
 .sound_icon {
     top: 255px;
 }
@@ -225,7 +237,7 @@ img {
     cursor: pointer;
     border: 1.5px solid white;
     position: absolute;
-    left:40%;
+    left: 40%;
     bottom: 15%;
     background-color: rgb(77, 75, 75);
     color: rgb(169, 163, 163);
@@ -235,11 +247,13 @@ img {
     visibility: hidden;
     transition: opacity 0.3s ease-in;
     border-radius: 15px;
-} 
-.helpBox ol li{
+}
+
+.helpBox ol li {
     margin-bottom: 5px;
 }
-.helpBox ol li span{
+
+.helpBox ol li span {
     color: rgb(255, 255, 255);
 }
 
@@ -259,9 +273,10 @@ img {
         box-shadow: none;
     }
 
-    .menu_icon{
-        top:10px
+    .menu_icon {
+        top: 10px
     }
+
     .dark_mode {
         top: 55px;
     }
@@ -277,10 +292,33 @@ img {
     .help_icon {
         top: 15px;
     }
-    .helpBox{
-        left:18%;
+
+    .helpBox {
+        left: 18%;
         bottom: 35%;
     }
 
+}
 
+
+
+
+.outer{
+    background: rgb(213, 205, 195);
+    width: fit-content;
+    cursor: pointer;
+    /* background: transparent; */
+    border: 1px solid #212389;
+    border-radius: 20px;
+    margin: auto;
+    padding: 2px;
+}
+.inner{
+    background: linear-gradient(to top left, #1e293b, #6366f1, #71717a);
+    border-radius: 20px;
+    width:fit-content;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    color: black;
 }
