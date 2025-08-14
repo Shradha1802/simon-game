@@ -85,7 +85,7 @@ h2 {
     color: white;
 }
 .SimonGame{
-    background-image: url(9.webp);
+    background-image: url(9.jpg);
     background-size: cover;
     background-clip: text;
     background-color: transparent;
@@ -322,3 +322,4 @@ img {
     justify-content: center;
     color: black;
 }
+
