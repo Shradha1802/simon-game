@@ -32,6 +32,11 @@ start.addEventListener("click", () => {
     if (iconSoundValue) {
       iconSound.play();
     }
+    document.querySelector('.outer').addEventListener("mouseenter", () => {
+      if (start.innerText != "Start") {
+        document.querySelector('.outer').style.transform = "scale(1)";
+      }
+    });
     if (level == 1) {
       start.innerText = "Toh chaliye Shuru karte hai!!";
     }
@@ -40,12 +45,7 @@ start.addEventListener("click", () => {
     }, 1800);
   }
 })
-start.addEventListener("mouseenter", () => {
-  if (start.innerText != "Start") {
-    start.style.transform = "scale(1)";
-    start.style.boxShadow = "none";
-  }
-});
+
 
 function arraysEqual(arr1, arr2) {
   if (arr1.length !== arr2.length) return false;
@@ -73,7 +73,6 @@ let compGame = function () {
   for (let i = 0; i < level; i++) {
     setTimeout(() => {
       let random = Math.floor(Math.random() * 4);
-      // console.log("Flash:", random);
       flash(random);
       gameSeq.push(opt[random].getAttribute("id"));
 
@@ -120,7 +119,6 @@ opt.forEach(function (o) {
         start.innerText = "You Lose!!!";
         restart.innerText = "Play Again";
         score.innerText = 0;
-        // gameStart=false;
       }
     }
     ++idx;
@@ -133,10 +131,9 @@ restart.addEventListener("click", () => {
     iconSound.play();
   }
   restart.innerText = "Restart";
-  // gameStart=true;
   level = 1;
   idx = 0;
-  score.innerText=0;
+  score.innerText = 0;
   levelUpgrade();
 })
 
@@ -146,8 +143,7 @@ let flash = function (idx) {
     click.play();
   }
   setTimeout(() => {
-    // console.log("flash removed")
-    opt[idx].classList.remove("flash")
+    opt[idx].classList.remove("flash");
   }, 400);
 }
 
@@ -181,15 +177,12 @@ darkImg.addEventListener("click", () => {
 
     // Change background
     targetElement.style.backgroundImage = "url('darkImg.png')";
-    h1.style.color = "white";
-    h2.style.color = "white";
+
   } else {
     // Revert image
     darkImg.src = "moon.png";
     // Revert background
     targetElement.style.backgroundImage = "url('backgroundImage.png')";
-    h1.style.color = "white";
-    h2.style.color = "white";
   }
 });
 
@@ -279,5 +272,5 @@ menuIcon.addEventListener("click", (e) => {
     menuIcon.setAttribute('src', 'menu.png');
     document.querySelector('.icons').style.opacity = 0;
   }
-
 })
+
