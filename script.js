@@ -19,6 +19,8 @@ let iconSoundValue = true;
 let iconSound = new Audio("Icon.mp3");
 let bgMusic = new Audio("bgMusic.mp3");
 let bgMusicValue = true;
+let SimonGame = document.querySelector(".SimonGame");
+
 
 bgMusic.loop = true;
 
@@ -166,6 +168,7 @@ for (let ele of opt) {
 
 const targetElement = document.body; // or document.querySelector('.main_body') etc.
 document.body.style.backgroundImage = "url('backgroundImage.png')";
+SimonGame.style.backgroundImage = "url(9.jpg)";
 
 darkImg.addEventListener("click", () => {
   if (iconSoundValue) {
@@ -177,12 +180,14 @@ darkImg.addEventListener("click", () => {
 
     // Change background
     targetElement.style.backgroundImage = "url('darkImg.png')";
+    SimonGame.style.backgroundImage = "url(3.jpeg)";
 
   } else {
     // Revert image
     darkImg.src = "moon.png";
     // Revert background
     targetElement.style.backgroundImage = "url('backgroundImage.png')";
+    SimonGame.style.backgroundImage = "url(9.jpg)";
   }
 });
 
@@ -273,4 +278,5 @@ menuIcon.addEventListener("click", (e) => {
     document.querySelector('.icons').style.opacity = 0;
   }
 })
+
 
