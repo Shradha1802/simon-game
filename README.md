@@ -3,7 +3,7 @@
 A browser-based implementation of the classic Simon memory game, built using HTML, CSS, and JavaScript.  
 Players repeat an ever-growing sequence of colors and sounds to test memory and focus.  
 
-Live Demo: [simon-game-two-swart.vercel.app](https://simon-game-two-swart.vercel.app)
+Live Demo: [simon-game-ochre-tau.vercel.app](https://simon-game-ochre-tau.vercel.app)
 
 ---
 
@@ -59,7 +59,7 @@ Live Demo: [simon-game-two-swart.vercel.app](https://simon-game-two-swart.vercel
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/simon-game.git
+git clone https://github.com/Shradha1802/simon-game.git
 
 # Navigate into the project folder
 cd simon-game
